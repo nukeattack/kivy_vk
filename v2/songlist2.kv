@@ -1,0 +1,39 @@
+<SongWidget>
+    cols: 2
+    size:(700, 100)
+    canvas.before:
+        Rectangle:
+            pos:self.pos
+            size:self.size
+            source:"img/back.png"
+    Label:
+        text: root.artist_name
+    GridLayout:
+        cols: 2
+        Button:
+            text: "Download"
+        Button:
+            text: "Cancel"
+    Label:
+        text: root.track_title
+    Button:
+        text: "Cancel"
+
+<SongList>
+    cols: 1
+    orientation: "vertical"
+    minimum_height: self.height
+    SongWidget:
+        #size_hint_y:None
+
+    SongWidget:
+        #size_hint_y:None
+        size_hint:(None, None)
+
+<SongScroll>
+    SongList:
+        size_hint: (None, None)
+
+<RootWidget>
+    SongScroll:
+        size:(800, 600)

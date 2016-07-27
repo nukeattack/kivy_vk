@@ -1,0 +1,15 @@
+#:kivy 1.0.9
+
+<ListToGo>:
+    Label:
+        font_size: 70
+        center_x: 0
+        top: root.top - 50
+        text: "0"
+
+<ImagePlayground>:
+    canvas:
+        Rectangle:
+            texture:self.texture
+            pos:self.pos
+            size:self.size
